@@ -3,121 +3,76 @@
     height: 100vh;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: start;
     align-items: center;
 
     color: var(--color-text-in-primary);
-    background: var(--color-primary);
+    background: #118811;
 }
-.logo-container img{
-height: 10rem;
-}
-.hero-image{
+
+.topLogo{
+    background:#fff;
     width: 100%;
-}
-.logo-container{
-    text-align: center;
-    margin-bottom: 3.2rem;
-}
-.logo-container h2 {
-    font-weight: 500;
-    font-size: 2.4rem;
-    line-height: 4.6rem;
-    margin-top: 0.8rem;
-}
-
-.buttons-container {
-    display: flex;
-    justify-content: center;
-    margin: 3.2rem 0;
-}
-.buttons-container a {
-    width: 30rem;
-    height: 10.4rem;
-    border-radius: 0.8rem;
-
-    font: 700 2.0rem Archivo;
-
+    height: 40%;
     display: flex;
     align-items: center;
-    justify-content: center;
-
+    justify-items: center;
+}
+.topLogo img {
+    margin: 20px auto;
+    height: 90%;
+}
+.login .inputBlock {
     text-decoration: none;
-    color: var(--color-button-text);
-
-    transition: background-color 0.2s;
+    display:flex;
+    flex-direction: column;
+    color: #fff;
 }
-.buttons-container a:first-child {
-    margin-right: 1.6rem;
+.login .inputBlock label{
+    font-size:2rem;
 }
-
-.buttons-container a img{
-    width: 4rem;
+.login .inputBlock input {
+    padding-left:10px;
+    font-size: 20px;
+    width: 300px;
+    height: 40px;
+    border-radius: 4px;
+    border:0;
+    background: #ffdcdc;
 }
-.buttons-container a.study{
-    background: var(--color-primary-lighter);
+.login .inputBlock button {
+    cursor: pointer;
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 4px;
+    border: 0;
+    font: 700 18px Archivo;
+    background: #f66;
+    color: #fff;
+    transition:0.3s;
 }
-.buttons-container a.give-classes{
-    background: var(--color-secundary);
+.login .inputBlock button:hover{
+    background: #f44;
 }
-.buttons-container a.study:hover{
-    background: var(--color-primary-light);
+.login .inputBlock:first-child{
+    margin-top: 20px;
 }
-.buttons-container a.give-classes:hover{
-    background: var(--color-secundary-dark);
-}
-.buttons-container a img {
-    margin-right: 2.4rem;
-}
-.total-connections {
-    font-size: 1.4rem;
-
+.suport {
+    margin-top: 20px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    text-align: center;
 }
-.total-connections img {
-    margin-left: 0.8rem;
+.footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20%;
+    margin-bottom: 5%;
 }
-
-@media (min-width: 1100px){
-    #page-landing-content{
-        max-width: 1100px;
-
-        display: grid;
-        grid-template-rows: 350px 1fr;
-        grid-template-columns: 2fr 1fr 1fr;
-        grid-template-areas: 
-            "logo hero hero"
-            "buttons buttons total"
-        ;
-    }
-    .logo-container {
-        grid-area: logo;
-        align-self: center;
-        text-align: left;
-        margin: 0;
-    }
-    .logo-container h2{
-        text-align: initial;
-        font-size: 3.6rem;
-    }
-    .logo-container img {
-        height: 100%;
-    }
-    .hero-image{
-        grid-area: hero;
-        justify-self: end;
-    }
-    .buttons-container{
-        grid-area: buttons;
-        justify-content: flex-start;
-    }
-    .buttons-container a {
-        font-size: 2.4rem;
-    }
-    .total-connections {
-        grid-area: total;
-        justify-self: end;
+@media (max-width: 700px){
+    .topLogo img {
+        width: 60%;
     }
 }

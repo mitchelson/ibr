@@ -11,29 +11,27 @@ import { Link } from 'react-router-dom';
 function Landing() {
     return (
         <div id="page-landing">
-            <div id="page-landing-content" className="container">
-                <div className="logo-container">
-                    <img src={logoImg} alt="Proffy" />
-                    <h2>Sua Plataforma de estudos online</h2>
+            <div className="topLogo">
+                <img src={landingImg} alt="Logo"/>
+            </div>
+            <div className="login">
+                <div className="inputBlock">
+                    <label> Login </label>
+                    <input type="text"/>
                 </div>
-
-                <img
-                    src={landingImg}
-                    alt="Plataforma de Estudos"
-                    className="hero-image" />
-                <div className="buttons-container">
-                    <Link to="/study" className="study">
-                        <img src={studyIcon} alt="Estudar" />
-                        Estudar
-                    </Link>
-                    <Link to="/give-classes" className="give-classes">
-                        <img src={giveClassesIcon} alt="Dar Aulas" />
-                        Dar Aulas
-                    </Link>
+                <div className="inputBlock">
+                    <label> Senha </label>
+                    <input type="password"/>
                 </div>
-                <span className="total-connections">
-                    Total de 200 conexões já realizadas <img src={purpleHeartIcons} alt="Coração roxo" />
-                </span>
+                <Link to="/study" className="inputBlock">
+                    <button>Entrar</button>    
+                </Link>
+                <div className="suport">
+                    Esqueceu a senha?<br/>Ligue para a TI
+                </div>
+                <div className="footer">
+                    Todos os direitos reservados 
+                </div>
             </div>
         </div>
     )

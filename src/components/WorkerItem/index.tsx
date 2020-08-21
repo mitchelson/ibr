@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles.css';
 
-interface GetUsers {
+export interface GetUsers {
     name: String,
     occupation: String,
-    status: String,
-    descrition: String,
+    status: Boolean,
+    description: String,
     register: number
 }
 
-const WorkerItem: React.FC<GetUsers> = ({name, occupation, status, descrition, register}) => {
+const WorkerItem: React.FC<GetUsers> = ({name, occupation, status, description, register}) => {
+    const [statusJob, setStatus] = useState('Desligado');
+    useEffect(()=> {
+        if (status) {
+            setStatus('Ativo')
+        }
+    }, [])
     return (
         <article className="teacher-item">
             <header>
@@ -20,9 +26,9 @@ const WorkerItem: React.FC<GetUsers> = ({name, occupation, status, descrition, r
                 </div>
             </header>
             <p>
-                Status: {status}
+                Status: {statusJob}
                         <br /><br />
-                        Descrição: {descrition}
+                        Descrição: {description}
                     </p>
             <footer>
                 <p>

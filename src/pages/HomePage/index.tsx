@@ -6,7 +6,6 @@ import './styles.css';
 import api from '../../services/api';
 
 function HomePage() {
-    const [funcao, setFuncao] = useState([]);
     const [statusFilter, setStatus] = useState('');
     const [inputName, setinputName] = useState('');
     const [selectOccupation, setOccupation] = useState('');

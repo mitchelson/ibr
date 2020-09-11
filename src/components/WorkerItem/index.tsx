@@ -2,14 +2,15 @@ import React, { useEffect, useState } from 'react';
 import './styles.css';
 
 export interface GetUsers {
-    name: String,
-    occupation: String,
-    status: Boolean,
-    description: String,
+    avatar: string,
+    name: string,
+    occupation: string,
+    status: boolean,
+    description: string,
     register: number
 }
 
-const WorkerItem: React.FC<GetUsers> = ({name, occupation, status, description, register}) => {
+const WorkerItem: React.FC<GetUsers> = ({avatar, name, occupation, status, description, register}) => {
     const [statusJob, setStatus] = useState('Desligado');
     useEffect(()=> {
         if (status) {
@@ -19,7 +20,7 @@ const WorkerItem: React.FC<GetUsers> = ({name, occupation, status, description, 
     return (
         <article className="teacher-item">
             <header>
-                <img src="https://avatars2.githubusercontent.com/u/19330404?s=460&u=92bd2475bcc9f12388b323926fd0d8212de0de64&v=4" alt="Mitchelson" />
+                <img src={avatar} alt="Mitchelson" />
                 <div>
                     <strong>{name}</strong>
                     <span>{occupation}</span>

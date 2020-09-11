@@ -45,10 +45,11 @@ function HomePage() {
                 </form>
             </PageHeader>
             <main>
+            <WorkerItem avatar="https://avatars2.githubusercontent.com/u/19330404?s=460&u=92bd2475bcc9f12388b323926fd0d8212de0de64&v=4" name="Mitchelson P. da Silva" occupation="Técnico em Informática" description="Desenvolve atividades voltadas a área de tecnologia e informática" status={(false)} register={0} />
                 {users.map(user => {
                     console.log(user)
                     return(
-                        <WorkerItem name={user.name} occupation={user.occupation} description={user.description} status={(user.status)} register={user.register} />
+                        <WorkerItem avatar={user.name} name={user.name} occupation={user.occupation} description={user.description} status={(user.status)} register={user.register} />
                     )
                 })}
             </main>

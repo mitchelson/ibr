@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import './styles.css';
 
 export interface GetUsers {
@@ -36,12 +37,17 @@ const WorkerItem: React.FC<GetUsers> = ({avatar, name, occupation, status, descr
                     Registros
                             <strong>{register}</strong>
                 </p>
-                <button type="button">
-                    Ver Registros
-                </button>
-                <button type="button">
-                    Adicionar Registro
-                </button>
+                <NavLink to="/new-register">
+                    <button type="button">
+                        Ver Registros
+                    </button>
+                </NavLink>
+                <NavLink to="/new-register">
+                    <button type="button">
+                        Adicionar Registro
+                    </button>
+                </NavLink>
+                
             </footer>
         </article>
     )

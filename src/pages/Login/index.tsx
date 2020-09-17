@@ -8,8 +8,10 @@ const history = createBrowserHistory({forceRefresh:true});
 function Login() {
     function handleLogin(){
         if(login === "admin" && senha === "1234"){
+            localStorage.setItem('auth', 'true');
             history.push("/");
         }else {
+            localStorage.setItem('auth', '');
             alert("Login ou senha inválidos!")
         }
     }

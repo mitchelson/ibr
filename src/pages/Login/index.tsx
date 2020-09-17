@@ -8,7 +8,7 @@ const history = createBrowserHistory({forceRefresh:true});
 function Login() {
     function handleLogin(){
         if(login === "admin" && senha === "1234"){
-            history.push("/home");
+            history.push("/");
         }else {
             alert("Login ou senha inválidos!")
         }

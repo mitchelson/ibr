@@ -12,23 +12,15 @@ function NewRegister() {
                 <form id="search-teachers">
                     <div className="input-block">
                         <label htmlFor="subject">Nome</label>
-                        <input type="text" id="subject" />
+                        <input disabled id="subject" value={'Mitchelson P da Silva'}/>
                     </div>
                     <div className="input-block">
                         <label htmlFor="week_day">Função</label>
-                        <select id="time">
-                            <option value={0}>Selecione</option>
-                            <option value={1}>Professor</option>
-                            <option value={2}>Recursos humanos</option>
-                        </select>
+                        <input id="time" value={'Técnico em Informática'} disabled />
                     </div>
                     <div className="input-block">
                         <label htmlFor="time">Status</label>
-                        <select id="time" >
-                            <option value={0}>Selecione</option>
-                            <option value={1}>Ativo</option>
-                            <option value={2}>Desligado</option>
-                        </select>
+                        <input value={'Desligado'} disabled          id="time" />
                     </div>
                 </form>
             </PageHeader>
